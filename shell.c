@@ -37,14 +37,12 @@ void execute(char **args){
     }
     pid_t pid = fork(); 
     if (pid == 0){
-        //ovaj kod se izvrsava u djetetu (novom procesu)
-        execvp(args[0], args); // tu se radi proces forka, ako execvp uspije dio koda dalje ne postoji vise...
+        execvp(args[0], args); 
         perror("greska");
         exit(1); 
     }else if (pid > 0){
-        //izvrsava se u roditleju (shell)
         int status; 
-        waitpid(pid, &status, 0); //sta je status tu ? 
+        waitpid(pid, &status, 0); 
     }else{
         perror("fork nije uspio");
     }
