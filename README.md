@@ -1,25 +1,18 @@
-# Moj Shell
+# C Shell
 
-Vlastita implementacija Unix shella napisana u C-u
+A simple Unix shell written in C as a personal project to learn more about operating systems and systems programming.
 
-## Što radi
+## Features
 
-- Čita i parsira korisnički unos
-- Pokreće vanjske programe (`ls`, `pwd`, itd.) koristeći `fork()` i `execvp()`
-- Podržava ugrađene komande: `cd` i `exit`
+- Command execution
+- Command parsing
+- Built-in `cd`
+- Built-in `exit`
+- Process creation using `fork()`
+- Program execution using `execvp()`
 
-## Kako pokrenuti
+## What I'm learning
 
-Potreban je GCC kompajler i Unix/Linux okruženje (ili WSL na Windowsu).
+I started this project to better understand how shells interact with the operating system, especially processes, system calls and memory management.
 
-```bash
-gcc shell.c -o mojshell
-./mojshell
-```
-
-## Primjer korištenja
-
-mojshell> ls -la
-mojshell> cd ..
-mojshell> pwd
-mojshell> exit
+The project is still in development.
